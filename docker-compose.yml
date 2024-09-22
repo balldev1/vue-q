@@ -6,7 +6,7 @@ services:
     environment:
       - POSTGRES_USER=balldev2
       - POSTGRES_PASSWORD=balldev2
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=postgres2
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -19,7 +19,7 @@ services:
     depends_on:
       - db
     environment:
-      DATABASE_URL: postgresql://balldev2:balldev2@db:5432/postgres
+      DATABASE_URL: postgresql://balldev2:balldev2@db:5432/postgres2
 
   frontend:
     build: ./frontend
